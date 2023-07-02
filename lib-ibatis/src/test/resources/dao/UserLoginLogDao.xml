@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.spring.lib.ibatis.demo.dao.UserLoginLogDao">
+
+    <sql id="Base_Column_List">
+        id, user_id, role_id, user_name, ip, remark, login_time, update_time
+    </sql>
+
+    <resultMap id="BaseResultMap" type="org.spring.lib.ibatis.demo.po.UserLoginLogPo">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="role_id" jdbcType="BIGINT" property="roleId" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="ip" jdbcType="VARCHAR" property="ip" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+        <result column="login_time" property="loginTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>
